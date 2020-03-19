@@ -26,3 +26,25 @@ a {
     box-shadow: 0 4px 0 rgba($color-red, 0.8);
   }
 }
+
+blockquote {
+  margin: 0 0 1em;
+  text-align: center;
+  background: $color-gold;
+
+  p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  cite {
+    font-style: italic;
+  }
+}
+
+.text--tagline {
+  padding: 2px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

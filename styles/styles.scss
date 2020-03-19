@@ -50,10 +50,13 @@ body {
     flex-direction: column;
     justify-content: center;
   }
-}
 
   .message-board {
     margin: 2rem auto;
+  }
+}
+
+  .message-board {
     background: white;
     padding: 1rem;
     color: black;
@@ -82,7 +85,13 @@ body {
       text-decoration: none;
       color: white;
       font-weight: 700;
+      font-size: 0.85em;
       transform: rotate(-20deg);
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 
