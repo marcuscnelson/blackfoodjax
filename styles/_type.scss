@@ -1,0 +1,28 @@
+html {
+  background: $page-background;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5rem;
+  font-size: 1.125em;
+}
+
+p, ul, ol {
+  margin: 0 0 1em;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0 0 1em;
+  color: $color-red;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+
+a {
+  color: $color-red;
+  box-shadow: 0 4px 0 rgba($color-red, 0.2);
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 4px 0 rgba($color-red, 0.8);
+  }
+}

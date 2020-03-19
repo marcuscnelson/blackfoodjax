@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/**
+ * Variables
+ */
+/*
+* Responsive Breakpoints
+*/
+/* Grids */
+/* Colors */
+/* UI Config */
+/**
+ * Media query mixin.
+ *
+ * ItΓÇÖs not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming youΓÇÖll want a
+ * change at ΓÇÿmobileΓÇÖ. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. ItΓÇÖs flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ * 
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * desk-wide
+ * 
+ * Not using a media query will, naturally, serve styles to all devices.
+ * 
+ * `@include media-query(palm){ [styles here] }`
+ * 
+ * We work out your end points for you:
+ */
+html {
+  background: #f7f1eb;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5rem;
+  font-size: 1.125em; }
+
+p, ul, ol {
+  margin: 0 0 1em; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0 0 1em;
+  color: #e20c0e;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2em; }
+
+a {
+  color: #e20c0e;
+  box-shadow: 0 4px 0 rgba(226, 12, 14, 0.2);
+  text-decoration: none; }
+  a:hover {
+    box-shadow: 0 4px 0 rgba(226, 12, 14, 0.8); }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html {
+  background: #f7f1eb;
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0; }
+  @media only screen and (min-width: 60rem) {
+    body {
+      display: grid;
+      grid-template-columns: minmax(400px, 30%) 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "header content";
+      min-height: 100vh; } }
+
+/**
+ * Header
+ */
+.page__header {
+  position: relative;
+  background-color: #e20c0e;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)), url("/images/arches@2X.jpg");
+  background-size: auto, 103px 23px;
+  background-repeat: no-repeat, repeat;
+  padding: 1rem;
+  text-align: center;
+  color: white; }
+  @media only screen and (min-width: 60rem) {
+    .page__header {
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: center; } }
+
+.message-board {
+  margin: 2rem auto;
+  background: white;
+  padding: 1rem;
+  color: black;
+  font-size: 0.833rem;
+  box-shadow: inset 0 0 0 4px white, inset 0 0 0 6px #f7cf45; }
+  @media only screen and (min-width: 60rem) {
+    .message-board {
+      width: 280px; } }
+
+#learn-more {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 180px;
+  height: 70px;
+  background: linear-gradient(-21deg, #000000 50%, transparent 50%);
+  text-transform: uppercase; }
+  #learn-more a {
+    position: absolute;
+    bottom: 22px;
+    right: 8px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transform: rotate(-20deg); }
+
+.page__logo {
+  display: block;
+  max-width: 16rem;
+  margin: 0 auto; }
+  @media only screen and (min-width: 46rem) {
+    .page__logo {
+      max-width: 16rem; } }
+
+.page__nav {
+  font-weight: 700;
+  font-size: 1.5rem; }
+  .page__nav a {
+    color: white;
+    text-shadow: 1px 1px black;
+    text-decoration: none; }
+
+.nav {
+  list-style-type: none;
+  padding: 0; }
+  .nav li {
+    margin-bottom: 1rem; }
+
+.page__wrapper {
+  padding: 1rem; }
+  @media only screen and (min-width: 60rem) {
+    .page__wrapper {
+      grid-area: content;
+      max-height: 100vh;
+      overflow-y: scroll; } }
+
+blockquote {
+  text-align: center; }
+
+/**
+ * Footer
+ */
+@media only screen and (min-width: 46rem) {
+  .page__footer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1fr 1fr; } }
+.page__footer .card:nth-of-type(1) {
+  background: rgba(0, 0, 0, 0.015); }
+.page__footer .card:nth-of-type(2) {
+  background: #ede7e1; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2rem; }
+  @media only screen and (min-width: 46rem) {
+    .card {
+      padding: 2rem 3rem; } }
+
+.card__title {
+  text-align: center; }
+
+@media only screen and (min-width: 46rem) {
+  #what-is-this {
+    grid-column: 1;
+    grid-row: 1 / span 2; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,23 @@
+/**
+ * Variables
+ */
+
+ 
+ /*
+ * Responsive Breakpoints
+ */
+$breakpoints: lap, desk, desk-wide;
+$lap-start:         46rem !default;
+$desk-start:        60rem !default;
+$desk-wide-start: 	74rem !default;
+
+/* Grids */
+$grid-padding: 1rem;
+
+/* Colors */
+$color-red: #e20c0e;
+$color-tan: #f7f1eb;
+
+/* UI Config */
+$page-background: $color-tan;
+$header-background: $color-red;
