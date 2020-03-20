@@ -87,8 +87,11 @@ body {
   padding: 0; }
   @media only screen and (min-width: 60rem) {
     body {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: minmax(300px, 30%) 1fr;
       grid-template-columns: minmax(300px, 30%) 1fr;
+      -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: "header content";
       min-height: 100vh; } }
@@ -107,9 +110,16 @@ body {
   color: white; }
   @media only screen and (min-width: 60rem) {
     .page__header {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center; } }
   .page__header .message-board {
     margin: 2rem auto; }
@@ -149,10 +159,12 @@ body {
 .page__logo {
   display: block;
   max-width: 16rem;
+  max-height: 120px;
   margin: 0 auto; }
   @media only screen and (min-width: 46rem) {
     .page__logo {
-      max-width: 16rem; } }
+      max-width: 16rem;
+      max-height: 160px; } }
 
 .page__nav {
   font-weight: 700;
@@ -172,6 +184,7 @@ body {
   padding: 1rem; }
   @media only screen and (min-width: 60rem) {
     .page__wrapper {
+      -ms-grid-column: 2;
       grid-area: content;
       max-height: 100vh;
       overflow-y: scroll; } }
@@ -193,8 +206,15 @@ blockquote {
   background: #ede7e1; }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 3rem 2rem; }
   @media only screen and (min-width: 46rem) {
@@ -206,7 +226,10 @@ blockquote {
 
 @media only screen and (min-width: 46rem) {
   #what-is-this {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     grid-row: 1 / span 2; } }
 
 /*# sourceMappingURL=styles.css.map */
