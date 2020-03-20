@@ -18,8 +18,11 @@ body {
   padding: 0;
   
   @include media-query(desk) {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: minmax(300px, 30%) 1fr;
     grid-template-columns: minmax(300px, 30%) 1fr;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
       "header content";
@@ -45,10 +48,17 @@ body {
   color: white;
 
   @include media-query(desk) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .message-board {
@@ -98,10 +108,12 @@ body {
   .page__logo {
     display: block;
     max-width: 16rem;
+    max-height: 120px;
     margin: 0 auto;
 
     @include media-query(lap-and-up) {
       max-width: 16rem;
+      max-height: 160px;
     }
   }
 
@@ -137,6 +149,7 @@ body {
   padding: $grid-padding;
   
   @include media-query(desk) {
+    -ms-grid-column: 2;
     grid-area: content;
     max-height: 100vh;
     overflow-y: scroll;
@@ -177,9 +190,16 @@ body {
 }
 
   .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: $grid-padding*3 $grid-padding*2;
 
     @include media-query(lap-and-up) {
@@ -194,7 +214,10 @@ body {
   #what-is-this {
 
     @include media-query(lap-and-up) {
+      -ms-grid-column: 1;
       grid-column: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
       grid-row: 1 / span 2;
     }
   }
